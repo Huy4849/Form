@@ -4,8 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+    <body>
+        <!-- method: ẩn đi thông tin đc gửi trên url -->
+        <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="POST" > 
+            <label for="name">Tên đăng nhập</label> <br>
+            <input type="text" name="username" id="name" placeholder="Tên đăng nhập" required>
+            <br>
+            <br>
+
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <br>
+            <br>
+
+            <label for="password">Mật Khẩu</label> <br>
+            <input type="password" name="password" id="password" placeholder="Mật Khẩu" required>
+            <br>
+            <br>
+            <label for="">Submit</label>
+            <input type="submit" id="Submit">
+        </form>
+
+        <form action="">
+            <input type="checkbox" name="" id="switch" checked>
+            <label class="switch" for="switch"></label>
+        </form>
+
+        <div class="contact-form">
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php" autocomplete="off" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="First Name" class="form-label">First Name</label>
+                        <input type="text" class="form-input" id="First Name" name="First Name" placeholder="Enter First Name" minlength="2">
+                        <p class="error">Vui lòng nhập lại tên</p>
+                    </div>
     
-</body>
+                    <div class="form-group">
+                        <label for="Last Name" class="form-label">Last Name</label>
+                        <input type="text" class="form-input" id="Last Name" name="Last Name" placeholder="Enter Last Name" minlength="2">
+                        <p class="error">Vui lòng nhập lại tên</p>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Mail" class="form-label">Mail</label>
+                        <input type="email" class="form-input" id="Mail" name="Mail" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <p class="error">Vui lòng nhập lại mail</p>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="Phone" class="form-label">Phone</label>
+                        <input type="tel" class="form-input" id="Phone" name="Phone" placeholder="Enter Phone" pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$">
+                        <p class="error">Vui lòng nhập lại số điện thoại</p>
+                    </div>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="" class="form-label Large">What the of website do you need?</label>
+                    </div>
+                </div>
+    
+                <div class="radio-row">
+                    <div class="radio-group">
+                        <input type="radio" name="type" id="Web-design" required >
+                        <label for="Web-design">Web Design</label>
+                    </div>
+    
+                    <div class="radio-group">
+                        <input type="radio" name="type" id="Web-development" required>
+                        <label for="Web-development">Web development</label>
+                    </div>
+    
+                    <div class="radio-group">
+                        <input type="radio" name="type" id="logo-design" required>
+                        <label for="logo-design">Logo Design</label>
+                    </div>
+    
+                    <div class="radio-group">
+                        <input type="radio" name="type" id="Other" required>
+                        <label for="Other">Other</label>
+                    </div>
+                </div>
+    
+                <div class="form-row Message">
+                    <div class="form-group">
+                        <label for="Message" class="form-label">Message</label>
+                        <textarea name="Message" id="Message" class="form-textarea" placeholder="Write your message..."></textarea>
+                    </div>
+                </div>
+    
+                <div class="form-row btn">
+                    <button class="form-btn" type="submit">Send message</button>
+                </div>
+            </form>
+        </div>
 </html>
